@@ -29,7 +29,7 @@ public class ThemeManager {
 
     public static void setTheme(Theme theme) {
         currentTheme = theme;
-        // update all active scenes
+        
         for (Window window : Window.getWindows()) {
             if (window.getScene() != null) {
                 applyThemeToScene(window.getScene());
@@ -63,9 +63,9 @@ public class ThemeManager {
                 return true;
             }
         } catch (Exception e) {
-            // ignore
+            
         }
-        return false; // Default to light if we can't determine
+        return false; 
     }
 
     private static void loadFonts() {
