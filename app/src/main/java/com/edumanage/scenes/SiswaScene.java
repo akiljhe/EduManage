@@ -431,7 +431,7 @@ public class SiswaScene {
                     siswaDAO.tambahSiswa(s);
                     showInfo("Siswa baru berhasil ditambahkan.", "#22C55E");
                 }
-                masterData = siswaDAO.getAllSiswa(); // re-fetch reference
+                masterData = siswaDAO.getAllSiswa();
                 refreshTableView();
                 clearForm();
             } catch (Exception ex) {
@@ -444,7 +444,7 @@ public class SiswaScene {
                 String nama = selectedSiswa.getNama();
                 siswaDAO.hapusSiswa(selectedSiswa.getId());
                 showInfo("Data " + nama + " berhasil dihapus.", "#22C55E");
-                masterData = siswaDAO.getAllSiswa(); // re-fetch reference
+                masterData = siswaDAO.getAllSiswa();
                 refreshTableView();
                 clearForm();
             } else {

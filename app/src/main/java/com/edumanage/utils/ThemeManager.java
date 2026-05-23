@@ -15,7 +15,7 @@ public class ThemeManager {
     private static final String LIGHT_CSS = "/com/edumanage/styles/light-theme.css";
     private static final String DARK_CSS = "/com/edumanage/styles/dark-theme.css";
     private static boolean fontsLoaded = false;
-    private static Theme currentTheme = Theme.DARK; // default
+    private static Theme currentTheme = Theme.DARK;
 
     private ThemeManager() {}
 
@@ -65,7 +65,7 @@ public class ThemeManager {
         } catch (Exception e) {
             
         }
-        return false; 
+        return false;
     }
 
     private static void loadFonts() {

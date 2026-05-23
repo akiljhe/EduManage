@@ -173,7 +173,7 @@ public class DashboardScene {
         btnTheme.setAlignment(Pos.CENTER_LEFT);
         btnTheme.setGraphicTextGap(12);
         
-        // Setup default text/icon
+        
         javafx.scene.image.ImageView themeIcon = new javafx.scene.image.ImageView(new javafx.scene.image.Image(getClass().getResourceAsStream("/icons/moon.png")));
         themeIcon.setFitWidth(16);
         themeIcon.setFitHeight(16);
@@ -190,7 +190,7 @@ public class DashboardScene {
             } else if (current == com.edumanage.utils.ThemeManager.Theme.LIGHT) {
                 com.edumanage.utils.ThemeManager.setTheme(com.edumanage.utils.ThemeManager.Theme.SYSTEM);
                 btnTheme.setText("Tema: System");
-                // just use sun or moon based on OS? we'll leave it as sun or a generic gear/half-moon
+                
             } else {
                 com.edumanage.utils.ThemeManager.setTheme(com.edumanage.utils.ThemeManager.Theme.DARK);
                 btnTheme.setText("Tema: Dark");
@@ -553,4 +553,3 @@ public class DashboardScene {
         if (clockThread != null) clockThread.interrupt();
     }
 }
-

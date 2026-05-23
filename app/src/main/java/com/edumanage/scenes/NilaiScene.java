@@ -648,7 +648,7 @@ public class NilaiScene {
         }
 
         showInfo("Nilai berhasil disimpan!", "#22C55E");
-        masterData = siswaDAO.getAllSiswa(); // re-fetch
+        masterData = siswaDAO.getAllSiswa();
         refreshTableView();
     }
 

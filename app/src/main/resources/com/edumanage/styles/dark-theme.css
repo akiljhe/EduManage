@@ -1,0 +1,696 @@
+.root {
+    -edu-bg: #09090B;
+    -edu-bg-card: #111113;
+    -edu-bg-navbar: #111113;
+    -edu-bg-muted: #1C1C1E;
+    -edu-bg-input: #18181B;
+    -edu-border: #27272A;
+    -edu-text: #FAFAFA;
+    -edu-text-muted: #A1A1AA;
+    -edu-text-placeholder: #52525B;
+    -edu-primary: #FAFAFA;
+    -edu-primary-hover: #E4E4E7;
+    -edu-primary-text: #09090B;
+    -edu-destructive: #EF4444;
+    -edu-destructive-bg: #1F1315;
+    -edu-accent: #3B82F6;
+    -edu-success: #22C55E;
+    -edu-warning: #F59E0B;
+    -edu-table-header-bg: #18181B;
+    -edu-table-hover: #1C1C1E;
+    -edu-table-selected: #172554;
+    -edu-shadow-color: rgba(0, 0, 0, 0.4);
+    -fx-font-family: "Geist", "Inter", ".SF NS", "SF Pro Display", "Segoe UI", sans-serif;
+    -fx-font-size: 13px;
+    -fx-background-color: -edu-bg;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   SIDEBAR
+   ══════════════════════════════════════════════════════════════ */
+
+.edu-sidebar {
+    -fx-background-color: -edu-bg-card;
+    -fx-border-color: -edu-border;
+    -fx-border-width: 0 1 0 0;
+}
+
+.edu-sidebar-header {
+    -fx-border-color: transparent;
+}
+
+.edu-sidebar-logo-icon {
+    -fx-background-color: -edu-primary;
+    -fx-text-fill: -edu-primary-text;
+    -fx-background-radius: 6;
+    -fx-font-size: 14px;
+}
+
+.edu-sidebar-text {
+    -fx-text-fill: -edu-text;
+}
+
+.edu-sidebar-icon {
+    -fx-text-fill: -edu-text-muted;
+}
+
+.edu-sidebar-icon-stroke {
+    -fx-stroke: -edu-text-muted;
+    -fx-fill: transparent;
+    -fx-stroke-width: 2;
+    -fx-stroke-line-cap: round;
+    -fx-stroke-line-join: round;
+}
+
+.edu-sidebar-item {
+    -fx-background-color: transparent;
+    -fx-padding: 8 10;
+    -fx-background-radius: 6;
+    -fx-cursor: hand;
+}
+
+.edu-sidebar-item:hover {
+    -fx-background-color: -edu-bg-muted;
+}
+
+.edu-sidebar-item-active {
+    -fx-background-color: -edu-bg-muted;
+    -fx-padding: 8 10;
+    -fx-background-radius: 6;
+    -fx-cursor: hand;
+}
+
+.edu-sidebar-item-active .edu-sidebar-icon {
+    -fx-text-fill: -edu-accent;
+}
+
+.edu-sidebar-item-active .edu-sidebar-icon-stroke {
+    -fx-stroke: -edu-accent;
+}
+
+.edu-sidebar-item-active .edu-sidebar-text {
+    -fx-text-fill: -edu-accent;
+    -fx-font-weight: 600;
+}
+
+.edu-sidebar-logout {
+    -fx-background-color: transparent;
+    -fx-padding: 8 10;
+    -fx-background-radius: 6;
+    -fx-cursor: hand;
+}
+
+.edu-sidebar-logout:hover {
+    -fx-background-color: -edu-destructive-bg;
+}
+
+.edu-sidebar-logout .edu-sidebar-icon {
+    -fx-text-fill: -edu-destructive;
+}
+
+.edu-sidebar-logout .edu-sidebar-icon-stroke {
+    -fx-stroke: -edu-destructive;
+}
+
+.edu-sidebar-logout .edu-sidebar-text {
+    -fx-text-fill: -edu-destructive;
+}
+
+.edu-sidebar-account {
+    -fx-background-radius: 6;
+    -fx-cursor: hand;
+}
+
+.edu-sidebar-account:hover {
+    -fx-background-color: -edu-bg-muted;
+}
+
+.edu-sidebar-avatar {
+    -fx-background-color: -edu-accent;
+    -fx-text-fill: white;
+    -fx-background-radius: 12;
+    -fx-font-size: 10px;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   CONTENT
+   ══════════════════════════════════════════════════════════════ */
+
+.edu-content {
+    -fx-background-color: -edu-bg;
+}
+
+.edu-title {
+    -fx-font-size: 24px;
+    -fx-font-weight: 700;
+    -fx-text-fill: -edu-text;
+}
+
+.edu-subtitle {
+    -fx-font-size: 13px;
+    -fx-text-fill: -edu-text-muted;
+}
+
+.edu-label {
+    -fx-font-size: 13px;
+    -fx-font-weight: 600;
+    -fx-text-fill: -edu-text;
+}
+
+.edu-text-muted {
+    -fx-text-fill: -edu-text-muted;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   CARDS
+   ══════════════════════════════════════════════════════════════ */
+
+.edu-card {
+    -fx-background-color: -edu-bg-card;
+    -fx-border-color: -edu-border;
+    -fx-border-width: 1;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(three-pass-box, -edu-shadow-color, 12, 0, 0, 4);
+}
+
+.edu-bg {
+    -fx-background-color: -edu-bg;
+}
+
+.edu-login-card {
+    -fx-background-color: -edu-bg-card;
+    -fx-border-color: -edu-border;
+    -fx-border-width: 1;
+    -fx-border-radius: 12;
+    -fx-background-radius: 12;
+    -fx-effect: dropshadow(three-pass-box, -edu-shadow-color, 16, 0, 0, 6);
+}
+
+.edu-login-left {
+    -fx-background-color: -edu-bg-card;
+}
+
+.edu-stat-card {
+    -fx-background-color: -edu-bg-card;
+    -fx-background-radius: 10;
+    -fx-border-color: -edu-border;
+    -fx-border-radius: 10;
+    -fx-border-width: 1;
+    -fx-effect: dropshadow(three-pass-box, -edu-shadow-color, 10, 0, 0, 3);
+}
+
+.edu-stat-value {
+    -fx-font-size: 28px;
+    -fx-font-weight: 700;
+    -fx-text-fill: -edu-text;
+}
+
+.edu-filter-panel {
+    -fx-background-color: -edu-bg-card;
+    -fx-border-color: -edu-border;
+    -fx-border-width: 1;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(three-pass-box, -edu-shadow-color, 12, 0, 0, 4);
+}
+
+.edu-filter-btn {
+    -fx-background-color: transparent;
+    -fx-text-fill: -edu-text-muted;
+    -fx-border-color: -edu-border;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-padding: 10 16;
+    -fx-cursor: hand;
+    -fx-alignment: center-left;
+    -fx-font-size: 13px;
+    -fx-font-weight: 500;
+}
+
+.edu-filter-btn:hover {
+    -fx-background-color: -edu-bg-muted;
+    -fx-text-fill: -edu-text;
+}
+
+.edu-filter-btn:selected {
+    -fx-background-color: -edu-primary;
+    -fx-text-fill: -edu-primary-text;
+    -fx-border-color: -edu-primary;
+    -fx-font-weight: 600;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   INPUTS
+   ══════════════════════════════════════════════════════════════ */
+
+.edu-input {
+    -fx-background-color: -edu-bg-input;
+    -fx-text-fill: -edu-text;
+    -fx-prompt-text-fill: -edu-text-placeholder;
+    -fx-border-color: -edu-border;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 10;
+    -fx-font-size: 13px;
+}
+
+.edu-input:focused {
+    -fx-border-color: -edu-accent;
+}
+
+.edu-combo-box {
+    -fx-background-color: -edu-bg-input;
+    -fx-border-color: -edu-border;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-font-size: 13px;
+    -fx-padding: 4;
+}
+.edu-combo-box:focused {
+    -fx-border-color: -edu-accent;
+}
+.edu-combo-box .list-cell {
+    -fx-text-fill: -edu-text;
+}
+.edu-combo-box .arrow {
+    -fx-background-color: -edu-text-muted;
+}
+.combo-box-popup .list-view {
+    -fx-background-color: -edu-bg-card;
+    -fx-border-color: -edu-border;
+}
+.combo-box-popup .list-cell {
+    -fx-text-fill: -edu-text;
+    -fx-background-color: transparent;
+}
+.combo-box-popup .list-cell:filled:hover {
+    -fx-background-color: -edu-bg-muted;
+}
+.combo-box-popup .list-cell:filled:selected {
+    -fx-background-color: -edu-accent;
+    -fx-text-fill: white;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   BUTTONS
+   ══════════════════════════════════════════════════════════════ */
+
+.edu-btn-primary {
+    -fx-background-color: -edu-primary;
+    -fx-text-fill: -edu-primary-text;
+    -fx-background-radius: 8;
+    -fx-padding: 10 20;
+    -fx-cursor: hand;
+    -fx-font-weight: 600;
+    -fx-font-size: 13px;
+}
+
+.edu-btn-primary:hover {
+    -fx-background-color: -edu-primary-hover;
+}
+
+.edu-btn-destructive {
+    -fx-background-color: transparent;
+    -fx-text-fill: -edu-destructive;
+    -fx-border-color: -edu-destructive;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 10 20;
+    -fx-cursor: hand;
+    -fx-font-size: 13px;
+}
+
+.edu-btn-destructive:hover {
+    -fx-background-color: -edu-destructive-bg;
+}
+
+.edu-btn-outline {
+    -fx-background-color: transparent;
+    -fx-text-fill: -edu-text;
+    -fx-border-color: -edu-border;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 10 20;
+    -fx-cursor: hand;
+    -fx-font-size: 13px;
+}
+
+.edu-btn-outline:hover {
+    -fx-background-color: -edu-bg-muted;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   TABLES
+   ══════════════════════════════════════════════════════════════ */
+
+.edu-table {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.edu-table .column-header-background {
+    -fx-background-color: -edu-table-header-bg;
+    -fx-border-color: transparent transparent -edu-border transparent;
+    -fx-border-width: 0 0 1 0;
+}
+
+.edu-table .column-header {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.edu-table .column-header .label {
+    -fx-text-fill: -edu-text-muted;
+    -fx-font-weight: 600;
+    -fx-font-size: 13px;
+    -fx-padding: 16 16;
+}
+
+.edu-table .table-row-cell {
+    -fx-background-color: -edu-bg-card;
+    -fx-border-color: transparent transparent -edu-border transparent;
+    -fx-border-width: 0 0 1 0;
+}
+
+.edu-table .table-row-cell:odd {
+    -fx-background-color: -edu-bg-card;
+}
+
+.edu-table .table-row-cell:hover {
+    -fx-background-color: -edu-table-hover;
+}
+
+.edu-table .table-row-cell:selected {
+    -fx-background-color: -edu-table-selected;
+}
+
+.edu-table .table-row-cell:empty {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.edu-table .table-cell {
+    -fx-text-fill: -edu-text;
+    -fx-padding: 16 16;
+    -fx-font-size: 14px;
+}
+
+.edu-table .table-row-cell:selected .table-cell {
+    -fx-text-fill: -edu-text;
+}
+
+.edu-table .placeholder .label {
+    -fx-text-fill: -edu-text-muted;
+    -fx-font-size: 14px;
+}
+
+.edu-table .filler {
+    -fx-background-color: -edu-table-header-bg;
+}
+
+.edu-table .corner {
+    -fx-background-color: -edu-table-header-bg;
+}
+
+/* Table scrollbar */
+.edu-table .scroll-bar {
+    -fx-background-color: transparent;
+}
+
+.edu-table .scroll-bar .thumb {
+    -fx-background-color: -edu-border;
+    -fx-background-radius: 4;
+}
+
+.edu-table .scroll-bar .increment-button,
+.edu-table .scroll-bar .decrement-button {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+}
+
+.edu-table .scroll-bar .increment-arrow,
+.edu-table .scroll-bar .decrement-arrow {
+    -fx-shape: "";
+    -fx-padding: 0;
+}
+
+.edu-table .scroll-bar .track {
+    -fx-background-color: transparent;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   SEARCH BAR
+   ══════════════════════════════════════════════════════════════ */
+
+.edu-search-bar {
+    -fx-background-color: -edu-bg-card;
+    -fx-border-color: -edu-border;
+    -fx-border-width: 1 1 0 1;
+    -fx-border-radius: 10 10 0 0;
+    -fx-background-radius: 10 10 0 0;
+    -fx-padding: 14 16;
+}
+
+.edu-search-input {
+    -fx-background-color: -edu-bg-muted;
+    -fx-text-fill: -edu-text;
+    -fx-prompt-text-fill: -edu-text-placeholder;
+    -fx-border-color: transparent;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 8 12 8 32;
+    -fx-font-size: 13px;
+}
+
+.edu-search-input:focused {
+    -fx-background-color: -edu-bg-input;
+    -fx-border-color: -edu-accent;
+    -fx-border-width: 1;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   PAGINATION
+   ══════════════════════════════════════════════════════════════ */
+
+.edu-pagination {
+    -fx-background-color: -edu-bg-card;
+    -fx-border-color: -edu-border;
+    -fx-border-width: 0 1 1 1;
+    -fx-border-radius: 0 0 10 10;
+    -fx-background-radius: 0 0 10 10;
+    -fx-padding: 12 16;
+}
+
+.edu-page-btn {
+    -fx-background-color: transparent;
+    -fx-text-fill: -edu-text;
+    -fx-border-color: -edu-border;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 6 12;
+    -fx-cursor: hand;
+    -fx-font-size: 12px;
+}
+
+.edu-page-btn:hover {
+    -fx-background-color: -edu-bg-muted;
+}
+
+.edu-page-btn:disabled {
+    -fx-opacity: 0.4;
+    -fx-cursor: default;
+}
+
+.edu-page-btn-active {
+    -fx-background-color: -edu-primary;
+    -fx-text-fill: -edu-primary-text;
+    -fx-border-color: -edu-primary;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 6 12;
+    -fx-cursor: hand;
+    -fx-font-size: 12px;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   TOGGLE BUTTONS (Filters)
+   ══════════════════════════════════════════════════════════════ */
+
+.edu-toggle {
+    -fx-background-color: transparent;
+    -fx-text-fill: -edu-text-muted;
+    -fx-border-color: -edu-border;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-padding: 7 14;
+    -fx-cursor: hand;
+    -fx-font-size: 12px;
+}
+
+.edu-toggle:hover {
+    -fx-background-color: -edu-bg-muted;
+}
+
+.edu-toggle:selected {
+    -fx-background-color: -edu-primary;
+    -fx-text-fill: -edu-primary-text;
+    -fx-border-color: -edu-primary;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   SCROLLPANE
+   ══════════════════════════════════════════════════════════════ */
+
+.edu-scroll {
+    -fx-background-color: transparent;
+    -fx-background: transparent;
+}
+
+.edu-scroll .viewport {
+    -fx-background-color: transparent;
+}
+
+.edu-scroll .scroll-bar {
+    -fx-background-color: transparent;
+}
+
+.edu-scroll .scroll-bar .thumb {
+    -fx-background-color: -edu-border;
+    -fx-background-radius: 4;
+}
+
+.edu-scroll .scroll-bar .increment-button,
+.edu-scroll .scroll-bar .decrement-button {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+}
+
+.edu-scroll .scroll-bar .increment-arrow,
+.edu-scroll .scroll-bar .decrement-arrow {
+    -fx-shape: "";
+    -fx-padding: 0;
+}
+
+.edu-scroll .scroll-bar .track {
+    -fx-background-color: transparent;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   SEPARATORS
+   ══════════════════════════════════════════════════════════════ */
+
+.edu-separator {
+    -fx-background-color: -edu-border;
+    -fx-max-height: 1;
+    -fx-pref-height: 1;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   LOGO CIRCLE
+   ══════════════════════════════════════════════════════════════ */
+
+.edu-logo-circle {
+    -fx-stroke: -edu-border;
+    -fx-fill: -edu-bg-card;
+}
+
+.edu-logo-text {
+    -fx-fill: -edu-text;
+    -fx-font-weight: 700;
+    -fx-font-size: 16px;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   ALERT / DIALOG
+   ══════════════════════════════════════════════════════════════ */
+
+.dialog-pane {
+    -fx-background-color: -edu-bg-card;
+}
+
+.dialog-pane .header-panel {
+    -fx-background-color: -edu-bg-card;
+}
+
+.dialog-pane .content {
+    -fx-text-fill: -edu-text;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   BADGES, PILLS, AVATARS, DAN AKTIF SIDEBAR
+   ══════════════════════════════════════════════════════════════ */
+
+.edu-badge-lulus {
+    -fx-background-color: transparent;
+    -fx-border-color: -edu-success;
+    -fx-border-radius: 12;
+    -fx-background-radius: 12;
+    -fx-text-fill: -edu-success;
+    -fx-padding: 2 8;
+    -fx-font-size: 11px;
+    -fx-font-weight: 600;
+}
+
+.edu-badge-gagal {
+    -fx-background-color: transparent;
+    -fx-border-color: -edu-destructive;
+    -fx-border-radius: 12;
+    -fx-background-radius: 12;
+    -fx-text-fill: -edu-destructive;
+    -fx-padding: 2 8;
+    -fx-font-size: 11px;
+    -fx-font-weight: 600;
+}
+
+.edu-badge-kelas {
+    -fx-background-color: transparent;
+    -fx-border-color: -edu-accent;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+    -fx-text-fill: -edu-accent;
+    -fx-padding: 2 6;
+    -fx-font-size: 11px;
+    -fx-font-weight: 600;
+}
+
+.edu-sidebar-active {
+    -fx-background-color: transparent;
+    -fx-border-color: -edu-accent;
+    -fx-border-width: 0 0 0 3;
+    -fx-border-radius: 0;
+}
+.edu-sidebar-active .edu-sidebar-icon {
+    -fx-text-fill: -edu-accent;
+}
+.edu-sidebar-active .edu-sidebar-icon-stroke {
+    -fx-stroke: -edu-accent;
+}
+.edu-sidebar-active .edu-sidebar-text {
+    -fx-text-fill: -edu-accent;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   CHARTS
+   ══════════════════════════════════════════════════════════════ */
+.chart {
+    -fx-padding: 10px;
+}
+.chart-content {
+    -fx-padding: 10px;
+}
+.chart-title {
+    -fx-text-fill: -edu-text;
+    -fx-font-size: 14px;
+}
+.chart-legend {
+    -fx-background-color: transparent;
+    -fx-text-fill: -edu-text-muted;
+}
+.chart-legend-item {
+    -fx-text-fill: -edu-text-muted;
+}
+.chart-pie-label {
+    -fx-fill: -edu-text;
+    -fx-font-size: 11px;
+}
