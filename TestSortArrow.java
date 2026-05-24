@@ -28,7 +28,7 @@ public class TestSortArrow extends Application {
                 FXCollections.sort(master, comp);
                 refresh();
             }
-            return true; // true means "I handled the sort"
+            return true; 
         });
         
         refresh();
@@ -38,7 +38,7 @@ public class TestSortArrow extends Application {
     }
     
     private void refresh() {
-        // take first 3 elements
+        
         List<String> sub = master.stream().limit(3).collect(Collectors.toList());
         tv.setItems(FXCollections.observableArrayList(sub));
     }
