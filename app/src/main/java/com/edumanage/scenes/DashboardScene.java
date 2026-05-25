@@ -320,6 +320,7 @@ public class DashboardScene {
     public void showDashboardContent() {
         VBox content = new VBox(24);
         content.setPadding(new Insets(32));
+        // TODO: diskusikan padding ini
         content.getStyleClass().add("edu-content");
 
         VBox titleBox = new VBox(4);
