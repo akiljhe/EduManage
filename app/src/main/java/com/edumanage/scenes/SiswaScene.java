@@ -158,7 +158,7 @@ public class SiswaScene {
     private TableView<Siswa> buildTable() {
         TableView<Siswa> tv = new TableView<>();
         tv.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
-        tv.getStyleClass().add("edu-table");
+        tv.getStyleClass().add("edu-table-error");
         tv.setPlaceholder(new Label("Belum ada data siswa"));
 
         TableColumn<Siswa, String> colNama = new TableColumn<>("Nama Siswa");
