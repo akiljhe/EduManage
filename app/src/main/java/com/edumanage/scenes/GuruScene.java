@@ -38,7 +38,7 @@ public class GuruScene {
     private Stage stage;
     private DashboardScene dashboard;
     private GuruDAO guruDAO = new GuruDAO();
-    private TableView<Guru> /* deklarasi tabel guru */ tableView;
+    private TableView<Guru> tableView;
     private ObservableList<Guru> masterData;
 
     private TextField tfNama, tfEmail, tfNip, tfJabatan;
@@ -164,8 +164,8 @@ public class GuruScene {
     }
 
     @SuppressWarnings("unchecked")
-    private TableView<Guru> /* deklarasi tabel guru */ buildTable() {
-        TableView<Guru> /* deklarasi tabel guru */ tv = new TableView<>();
+    private TableView<Guru> buildTable() {
+        TableView<Guru> tv = new TableView<>();
         tv.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
         tv.getStyleClass().add("edu-table");
         tv.setPlaceholder(new Label("Belum ada data guru"));
