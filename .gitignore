@@ -2,6 +2,7 @@
 .gradle/
 build/
 app/build/
+app/bin/
 
 # IDE files (IntelliJ IDEA, Eclipse, VS Code)
 .idea/

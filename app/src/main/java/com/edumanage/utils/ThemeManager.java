@@ -24,6 +24,7 @@ public class ThemeManager {
             loadFonts();
             fontsLoaded = true;
         }
+        startSystemThemePoller();
         applyThemeToScene(scene);
     }
 
@@ -41,20 +42,42 @@ public class ThemeManager {
         return currentTheme;
     }
 
+    private static javafx.animation.Timeline themePoller;
+    private static Boolean lastSystemWasDark = null;
+
+    public static void startSystemThemePoller() {
+        if (themePoller == null) {
+            themePoller = new javafx.animation.Timeline(new javafx.animation.KeyFrame(javafx.util.Duration.seconds(3), e -> {
+                if (currentTheme == Theme.SYSTEM) {
+                    boolean isDarkNow = isMacDarkMode();
+                    if (lastSystemWasDark != null && lastSystemWasDark != isDarkNow) {
+                        setTheme(Theme.SYSTEM);
+                    }
+                }
+            }));
+            themePoller.setCycleCount(javafx.animation.Animation.INDEFINITE);
+            themePoller.play();
+        }
+    }
+
     private static void applyThemeToScene(Scene scene) {
         String cssToLoad = DARK_CSS;
         if (currentTheme == Theme.LIGHT) {
             cssToLoad = LIGHT_CSS;
         } else if (currentTheme == Theme.SYSTEM) {
-            cssToLoad = isMacDarkMode() ? DARK_CSS : LIGHT_CSS;
+            boolean isDark = isMacDarkMode();
+            lastSystemWasDark = isDark;
+            cssToLoad = isDark ? DARK_CSS : LIGHT_CSS;
         }
         
         String cssPath = ThemeManager.class.getResource(cssToLoad).toExternalForm();
-        scene.getStylesheets().clear();
-        scene.getStylesheets().add(cssPath);
+        if (!scene.getStylesheets().contains(cssPath)) {
+            scene.getStylesheets().clear();
+            scene.getStylesheets().add(cssPath);
+        }
     }
 
-    private static boolean isMacDarkMode() {
+    public static boolean isMacDarkMode() {
         try {
             Process process = Runtime.getRuntime().exec("defaults read -g AppleInterfaceStyle");
             BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
