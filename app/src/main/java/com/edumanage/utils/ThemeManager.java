@@ -49,7 +49,7 @@ public class ThemeManager {
         if (themePoller == null) {
             themePoller = new javafx.animation.Timeline(new javafx.animation.KeyFrame(javafx.util.Duration.seconds(3), e -> {
                 if (currentTheme == Theme.SYSTEM) {
-                    boolean isDarkNow = isMacDarkMode();
+                    boolean isDarkNow = isSystemDarkMode();
                     if (lastSystemWasDark != null && lastSystemWasDark != isDarkNow) {
                         setTheme(Theme.SYSTEM);
                     }
@@ -65,7 +65,7 @@ public class ThemeManager {
         if (currentTheme == Theme.LIGHT) {
             cssToLoad = LIGHT_CSS;
         } else if (currentTheme == Theme.SYSTEM) {
-            boolean isDark = isMacDarkMode();
+            boolean isDark = isSystemDarkMode();
             lastSystemWasDark = isDark;
             cssToLoad = isDark ? DARK_CSS : LIGHT_CSS;
         }
@@ -77,7 +77,17 @@ public class ThemeManager {
         }
     }
 
-    public static boolean isMacDarkMode() {
+    public static boolean isSystemDarkMode() {
+        String os = System.getProperty("os.name").toLowerCase();
+        if (os.contains("mac")) {
+            return isMacDarkMode();
+        } else if (os.contains("win")) {
+            return isWindowsDarkMode();
+        }
+        return false;
+    }
+
+    private static boolean isMacDarkMode() {
         try {
             Process process = Runtime.getRuntime().exec("defaults read -g AppleInterfaceStyle");
             BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
@@ -86,7 +96,24 @@ public class ThemeManager {
                 return true;
             }
         } catch (Exception e) {
-            
+        }
+        return false;
+    }
+
+    private static boolean isWindowsDarkMode() {
+        try {
+            Process process = Runtime.getRuntime().exec(new String[] {
+                "reg", "query", "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize", "/v", "AppsUseLightTheme"
+            });
+            BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
+            String line;
+            while ((line = reader.readLine()) != null) {
+                if (line.contains("REG_DWORD")) {
+                    // 0x0 means dark theme, 0x1 means light theme
+                    return line.contains("0x0");
+                }
+            }
+        } catch (Exception e) {
         }
         return false;
     }

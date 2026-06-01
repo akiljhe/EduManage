@@ -190,7 +190,7 @@ public class DashboardScene {
             } else if (current == com.edumanage.utils.ThemeManager.Theme.LIGHT) {
                 com.edumanage.utils.ThemeManager.setTheme(com.edumanage.utils.ThemeManager.Theme.SYSTEM);
                 btnTheme.setText("Tema: System");
-                boolean isDark = com.edumanage.utils.ThemeManager.isMacDarkMode();
+                boolean isDark = com.edumanage.utils.ThemeManager.isSystemDarkMode();
                 themeIcon.setImage(new javafx.scene.image.Image(getClass().getResourceAsStream(isDark ? "/icons/moon.png" : "/icons/sun.png")));
             } else {
                 com.edumanage.utils.ThemeManager.setTheme(com.edumanage.utils.ThemeManager.Theme.DARK);
