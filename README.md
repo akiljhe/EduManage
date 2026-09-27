@@ -184,16 +184,6 @@ Password : admin123
 
 ---
 
-## 👥 Anggota Tim
-
-| Nama | NIM | Tugas |
-|------|-----|-------|
-| [Nama 1] | [NIM] | Model (OOP) + DAO + Database |
-| [Nama 2] | [NIM] | Scene Login + Dashboard + Thread |
-| [Nama 3] | [NIM] | Scene Siswa + Guru + UI Design |
-
----
-
 ## 📚 Referensi Materi
 
 Proyek ini menerapkan materi dari modul praktikum:
